@@ -83,6 +83,9 @@ I hope you enjoy your Neovim journey,
 
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
+vim.opt.wrap = true -- Enables visual wrapping
+vim.opt.linebreak = true -- Wraps at the end of a word rather than mid-word
+vim.opt.textwidth = 0 -- Ignores 'textwidth' for auto-breaking (avoids hard wraps)
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -975,7 +978,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
